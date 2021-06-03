@@ -1,0 +1,5 @@
+.DS*
+__pycache__/
+dask-worker-space/
+lichess*
+mydask.png
