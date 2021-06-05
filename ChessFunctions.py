@@ -143,7 +143,7 @@ def recommend_move(board=None, max_level=3):
     
     loss_sum = np.array(loss_sum)
     #print('loss_sum', loss_sum)
-    print(loss_sum)
+    ###print(loss_sum)
     loss_sum_min = np.where(loss_sum == loss_sum.min())[0]
     #print('loss_sum_min', loss_sum_min)
     recommended_move_idx = np.random.choice(loss_sum_min)
