@@ -10,15 +10,17 @@ When you unzip the submitted file, you will see the following:
         to create the conda environment for this project.
     4. "FinalModel.joblib" - The best MLP model we created. This will
         be used when we play against the computer.
-    5. "lichess_elite_2020-06.pgn" - The dataset. Contains thousands
-        of chess games, from which we used 4,000.
-    6. "PlayEngine.ipynb" - This notebook is interactive. It allows
+    5. "PlayEngine.ipynb" - This notebook is interactive. It allows
         a user to play the computer which makes moves based on our 
         model predictions.
-    7. "README.txt" - Read me for more details.
+    6. "README.txt" - Read me for more details.
 
 
 To run this project please perform the following steps:
+
+Download the Data
+    1. Download the data from https://database.nikonoel.fr/lichess_elite_2020-06.zip
+       And put the downloaded data in the same directory as the other project files.
 
 Prepare Environment
     1. Execute "conda env create -f environment.yml" in a terminal to install 
