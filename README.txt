@@ -48,10 +48,6 @@ We also prepared a chess game. If you would like to run this:
        to move the king's pawn to e4 (the most common chess opening), 
        type 'e2e4' when prompted. We hope you enjoy!
 
-When you are finished with Chess Engine 230, you may remove
-the environment by doing the following:
-    1. Execute "./remove_environment.sh" in a terminal. Once again,
-       this works on MacOS, and probably on Linux as well.
 
 Thank you for an excellent quarter.
 
