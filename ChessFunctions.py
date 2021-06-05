@@ -7,11 +7,20 @@ import dask
 
 # Flatten any board into a single string
 def flatten_board(x):
+    """
+    Takes a board object from and converts it 
+    to a flattened string.
+    """
     return(str(x).replace(' ','').replace('\n',''))
 
 # Encode any board to get its board state
 def get_encoded_board(x):
-    '''Must pass a flattened board'''
+    """
+    Must pass a flattened board. Converts a 
+    flattened board into a 770 feature encoded vector.
+    The vector contains an entry for all possible 
+    squares a piece can be on.
+    """
     num_squares = range(64)
     
     #Black Player Feature Vectors
@@ -44,7 +53,9 @@ def get_encoded_board(x):
 
 # Recursion
 class Tree:
-    """Base Class used to setup chess move tree"""
+    """
+    Base Class used to setup chess move tree
+    """
     def __init__(self, board):
         self.board = board
         self.children = []
@@ -54,7 +65,9 @@ class Tree:
 
 
 class Node:
-    """Class used to add depth to Tree class"""
+    """
+    Class used to add depth to Tree class
+    """
     def __init__(self, parent, board, move):
         self.parent = parent
         self.board = board
@@ -80,8 +93,10 @@ def build_tree(parent, level, max_level=1):
             build_tree(node, level+1, max_level=max_level)
 
 def get_leaf(child, leaf_nodes, level):
-    """After a Tree is built, this is used to get a reference 
-    to the leaf nodes out to level"""
+    """
+    After a Tree is built, this is used to get a reference 
+    to the leaf nodes out to level
+    """
     if not child.children:
         leaf_nodes.append((child, level))
         return
@@ -90,6 +105,11 @@ def get_leaf(child, leaf_nodes, level):
             get_leaf(child, leaf_nodes, level+1)  
 
 def recommend_move(board=None, max_level=3):
+    """
+    Goes through leaf nodes to max_level, and 
+    averages the board evaluation per possible next 
+    move and picks the move with the best average outcome.
+    """
     if not board:
         board = chess.Board() # Instantiate board - gone if used as method
         print("Creating a board")

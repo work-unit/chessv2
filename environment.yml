@@ -1,4 +1,4 @@
-name: dask-tutorial
+name: grand_master
 channels:
   - conda-forge
   - defaults
