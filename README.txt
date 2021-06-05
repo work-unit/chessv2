@@ -16,18 +16,18 @@ When you unzip the submitted file, you will see the following:
         a user to play the computer which makes moves based on our 
         model predictions.
     7. "README.txt" - Read me for more details.
-    8. "remove_environment.sh" - Removes the conda environment used
-        to run this project. :-(
-    9. "setup_environment.sh" - Creates the conda environment used to 
-        run this project. :-)
 
 
 To run this project please perform the following steps:
 
 Prepare Environment
-    1. Execute "./setup_environment.sh" in a terminal to install 
-       environment and open jupyter lab. This works on MacOS and 
-       likely works on Linux as well.
+    1. Execute "conda env create -f environment.yml" in a terminal to install 
+       the environment.
+
+    2. Execute "conda activate grand_master" in a terminal to activate the 
+       grand_master environment.
+
+    3. Execute "jupyter lab" in a terminal to open jupyter lab.
 
 Preparing Data, Training the Model, and Analysis
     1. Run the "Chess_Engine_Network.ipynb".
